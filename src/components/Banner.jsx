@@ -7,7 +7,7 @@ import Search from "../components/Search";
 const Banner = () => {
   return (
     <section className="h-full max-h-[640px] mb-8 xl:mb-24">
-      <div className="flex flex-col lg:flex-row items-center">
+      <div className="flex flex-col-reverse lg:flex-row items-center">
         <div className="lg:ml-8 xl:ml-[135px] flex flex-col items-center lg:items-end text-center lg:text-left justify-end flex-1 px-4 lg:px-0 max-w-[480px]">
           <h1 className="text-4xl lg:text-[58px] font-semibold leading-none mb-6">
             <span className="text-[#008B8B]">Rent</span> Your Dream House With
@@ -21,8 +21,8 @@ const Banner = () => {
           </p>
         </div>
         {/* image */}
-        <div className="hidden lg:flex flex-1 justify-center items-center">
-          <img src={Image} alt="" className="w-[550px]" />
+        <div className="lg:flex flex-1 justify-center items-center mb-10 lg:mb-0">
+          <img src={Image} alt="" className="w-[390px] lg:w-[550px]" />
         </div>
       </div>
       <Search />
