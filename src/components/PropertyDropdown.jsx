@@ -1,13 +1,13 @@
 import { useContext, useEffect, useState } from "react";
-import { RiMapPinLine, RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
+import { RiHome5Line, RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 
 // import headless ui
 
 import { Menu } from "@headlessui/react";
 import { HouseContext } from "./HouseContext";
 
-const CountryDropdown = () => {
-  const { countries, country, setCountry } = useContext(HouseContext);
+const PropertyDropdown = () => {
+  const { properties, property, setProperty } = useContext(HouseContext);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -16,10 +16,12 @@ const CountryDropdown = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center w-full text-left px-[18px] border rounded-lg h-[64px]"
       >
-        <RiMapPinLine className="dropdown-icon-primary" />
+        <RiHome5Line className="dropdown-icon-primary" />
         <div>
-          <div className="text-[15px] font-medium leading-tight">{country}</div>
-          <div className="text-[12px]">Select your place</div>
+          <div className="text-[15px] font-medium leading-tight">
+            {property}
+          </div>
+          <div className="text-[12px]">Select property</div>
         </div>
         {isOpen ? (
           <RiArrowUpSLine className="dropdown-icon-secondary" />
@@ -28,15 +30,15 @@ const CountryDropdown = () => {
         )}
       </Menu.Button>
       <Menu.Items className="dropdown-menu">
-        {countries.map((country, index) => {
+        {properties.map((property, index) => {
           return (
             <Menu.Item
-              onClick={() => setCountry(country)}
+              onClick={() => setProperty(property)}
               as="li"
               key={index}
               className="cursor-pointer hover:text-[#008B8B]"
             >
-              {country}
+              {property}
             </Menu.Item>
           );
         })}
@@ -45,4 +47,4 @@ const CountryDropdown = () => {
   );
 };
 
-export default CountryDropdown;
+export default PropertyDropdown;

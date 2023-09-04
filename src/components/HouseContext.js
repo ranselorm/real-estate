@@ -18,11 +18,24 @@ export const HouseContextProvider = ({ children }) => {
       return house.country;
     });
     const uniqueCountries = ["Location (any)", ...new Set(allCountries)];
-    console.log(uniqueCountries);
     setCountries(uniqueCountries);
   }, []);
 
-  // console.log(allCountries);
+  //return all properties
+
+  useEffect(() => {
+    const allProperties = houses.map((house) => {
+      return house.type;
+    });
+
+    const uniqueProperties = ["Property type (any)", ...new Set(allProperties)];
+    setProperties(uniqueProperties);
+    // console.log(uniqueProperties);
+  }, []);
+
+  const handleClick = () => {
+    console.log("clicked");
+  };
 
   return (
     <HouseContext.Provider
@@ -37,6 +50,7 @@ export const HouseContextProvider = ({ children }) => {
         setPrice,
         houses,
         loadng,
+        handleClick,
       }}
     >
       {children}

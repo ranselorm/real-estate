@@ -21,7 +21,7 @@ const Banner = () => {
           </p>
         </div>
         {/* image */}
-        <div className="lg:flex flex-1 justify-center items-center mb-10 lg:mb-0">
+        <div className="lg:flex flex-1 justify-end items-end mb-10 lg:mb-0">
           <img src={Image} alt="" className="w-[390px] lg:w-[550px]" />
         </div>
       </div>
