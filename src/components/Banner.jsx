@@ -1,4 +1,7 @@
 import React from "react";
+
+// import link
+import { Link } from "react-router-dom";
 // import image
 import Image from "../assets/img/house-banner.png";
 // import component
@@ -19,6 +22,7 @@ const Banner = () => {
             deleniti molestiae numquam at ut quo saepe obcaecati, illum, nobis
             suscipit possimus!
           </p>
+          <Link></Link>
         </div>
         {/* image */}
         <div className="lg:flex flex-1 justify-end items-end mb-10 lg:mb-0">
