@@ -22,12 +22,20 @@ const Banner = () => {
             deleniti molestiae numquam at ut quo saepe obcaecati, illum, nobis
             suscipit possimus!
           </p>
-          <Link
-            to=""
-            className="bg-[#008B8B] text-white px-4 py-2 hover:bg-[#1d5353] transition-all duration-300 rounded-lg mt-10"
-          >
-            Discover More
-          </Link>
+          <div className="flex gap-x-4 w-3/4 mt-10">
+            <Link
+              to=""
+              className="bg-[#008B8B] text-white py-3 px-4 hover:bg-transparent hover:text-black hover:border-[#008B8B] border transition-all duration-300 rounded w-full flex items-center justify-center"
+            >
+              Discover More
+            </Link>
+            <Link
+              to=""
+              className="border border-[#008B8B] hover:bg-[#1d5353] hover:text-white text-[#008B8B] transition-all duration-300 px-8 py-[7px] rounded w-full flex items-center justify-center"
+            >
+              About Us
+            </Link>
+          </div>
         </div>
         {/* image */}
         <div className="lg:flex flex-1 justify-end items-end mb-10 lg:mb-0">
